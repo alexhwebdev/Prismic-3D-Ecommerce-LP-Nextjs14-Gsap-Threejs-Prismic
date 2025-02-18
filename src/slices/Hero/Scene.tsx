@@ -40,16 +40,10 @@ export default function Scene({}: Props) {
       !can1GroupRef.current ||
       !can2GroupRef.current ||
       !groupRef.current
-    )
+    ) {
       return;
-
+    }
     isReady();
-
-    // blackCherry
-    // lemonLime
-    // grape
-    // strawberryLemonade
-    // watermelon
 
     // Set can starting location
     gsap.set(can1Ref.current.position, { x: -1.2 }); // blackCherry
