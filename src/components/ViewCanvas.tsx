@@ -1,14 +1,16 @@
 "use client";
 
 import { Canvas } from "@react-three/fiber";
-import { Environment, View } from "@react-three/drei";
+import { View } from "@react-three/drei";
 import { Suspense } from "react";
+// Calls loader only when its needed.
 import dynamic from "next/dynamic";
-import { SodaCan } from "./SodaCan";
-import FloatingCan from "./FloatingCan";
+// import { Perf } from 'r3f-perf';
 
 const Loader = dynamic(
-  () => import("@react-three/drei").then((mod) => mod.Loader),
+  () => import("@react-three/drei").then(
+    (mod) => mod.Loader
+  ),
   { ssr: false },
 );
 
@@ -36,11 +38,8 @@ export default function ViewCanvas({}: Props) {
       >
         <Suspense fallback={null}>
           <View.Port />
+          {/* <Perf /> */}
         </Suspense>
-        {/* <mesh>
-          <boxGeometry />
-          <meshStandardMaterial />
-        </mesh> */}
       </Canvas>
       <Loader />
     </>

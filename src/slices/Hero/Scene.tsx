@@ -9,7 +9,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import FloatingCan from "@/components/FloatingCan";
 import { useStore } from "@/hooks/useStore";
-
+import * as THREE from "three";
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 type Props = {};
@@ -17,16 +17,16 @@ type Props = {};
 export default function Scene({}: Props) {
   const isReady = useStore((state) => state.isReady);
 
-  const can1Ref = useRef<Group>(null);
-  const can2Ref = useRef<Group>(null);
-  const can3Ref = useRef<Group>(null);
-  const can4Ref = useRef<Group>(null);
-  const can5Ref = useRef<Group>(null);
+  const can1Ref = useRef<THREE.Group>(null);
+  const can2Ref = useRef<THREE.Group>(null);
+  const can3Ref = useRef<THREE.Group>(null);
+  const can4Ref = useRef<THREE.Group>(null);
+  const can5Ref = useRef<THREE.Group>(null);
 
-  const can1GroupRef = useRef<Group>(null);
-  const can2GroupRef = useRef<Group>(null);
+  const can1GroupRef = useRef<THREE.Group>(null);
+  const can2GroupRef = useRef<THREE.Group>(null);
 
-  const groupRef = useRef<Group>(null);
+  const groupRef = useRef<THREE.Group>(null);
 
   const FLOAT_SPEED = 1.5;
 

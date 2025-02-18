@@ -71,7 +71,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
           start: "top top",
           end: "bottom bottom",
           scrub: 1.5, // when chars come in, they finish as you scroll
-          markers: true,
+          // markers: true,
         },
       });
 
